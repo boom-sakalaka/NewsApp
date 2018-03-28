@@ -9,12 +9,12 @@
 <script>
 export default {
   name: 'App',
-  methods :{
-
-  }
 }
 </script>
 
-<style>
+<style type="text/stylus" lang="stylus">
+ #app
+   height: 100%
+   width: 100%
 
 </style>

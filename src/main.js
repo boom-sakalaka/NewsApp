@@ -6,6 +6,7 @@ import router from './router'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import 'normalize.css'
+import '../static/base.styl'
 import axios from 'axios'
 import store from './store/store'
 

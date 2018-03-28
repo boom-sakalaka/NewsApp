@@ -4,8 +4,8 @@ import Index from '../components/index'
 import hotList from '../components/hotnews'
 import user from  '../components/user'
 import newsDetail from '../components/newsDetail'
-import footer  from '../components/footer'
-
+import userLogin from '../components/userlogin'
+import register from '../components/register'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +33,16 @@ export default new Router({
       path: '/newsDetail',
       name: 'newsDetail',
       component: newsDetail
+    },
+    {
+      path: '/userLogin',
+      name: 'userLogin',
+      component: userLogin
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: register
     }
   ]
 })
