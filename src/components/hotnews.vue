@@ -16,8 +16,16 @@
 //  import tabbar from './tabbar.vue'
   import newsList from '../components/newsList'
   import footerNav from '../components/footer'
-  export default {
+  import { Indicator } from 'mint-ui';
+
+export default {
     name: 'hotNews',
+    beforeCreate() {
+      Indicator.open()
+      setTimeout(()=> {
+        Indicator.close()
+      },2000)
+    },
     data () {
       return {
 //        selected:"hotList",

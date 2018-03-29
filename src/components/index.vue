@@ -42,8 +42,14 @@
   import store from '../store/store'
   import newsList from '../components/newsList'
   import footerNav from '../components/footer'
-
+  import { Indicator } from 'mint-ui';
 export default {
+  beforeCreate() {
+      Indicator.open()
+      setTimeout(()=> {
+          Indicator.close()
+      },2000)
+  },
   created(){
     this.getChannelInfo()
     this.getNewsData('头条')

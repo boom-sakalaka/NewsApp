@@ -20,7 +20,14 @@
 
 <script>
   import store from '../store/store'
+  import { Indicator } from 'mint-ui';
   export default {
+    beforeCreate() {
+      Indicator.open()
+      setTimeout(()=> {
+        Indicator.close()
+      },2000)
+    },
       store,
     computed :{
           newsDetailInfo (){

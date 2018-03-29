@@ -39,10 +39,17 @@
 
 <script>
 //  import tabbar from './tabbar'
+import { Indicator } from 'mint-ui';
   import split from './split'
   import footerNav from '../components/footer'
   export default {
     name: 'userContent',
+    beforeCreate() {
+      Indicator.open()
+      setTimeout(()=> {
+        Indicator.close()
+      },2000)
+    },
     data () {
       return {
 //        selected:"UserCenter",

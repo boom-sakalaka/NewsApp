@@ -15,7 +15,7 @@
         <router-link to="/hostList">
             <div class="nav-box">
               <div class="nav-icon">
-                <img src="../assets/hotnews.png" >
+                <img src="../assets/hotnews.png">
               </div>
               <div class="nav-text">精选</div>
             </div>

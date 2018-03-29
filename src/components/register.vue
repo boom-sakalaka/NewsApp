@@ -14,21 +14,47 @@
       <mt-field label="网站" placeholder="请输入网址" type="url" v-model="website"></mt-field>
       <mt-field label="数字" placeholder="请输入数字" type="number" v-model="number"></mt-field>
       <mt-field label="生日" placeholder="请输入生日" type="date" v-model="birthday"></mt-field>
-      <mt-field label="自我介绍" placeholder="自我介绍" type="textarea" rows="4" v-modal="introduction"></mt-field>
+      <mt-field label="自我介绍" placeholder="自我介绍" type="textarea" rows="4" v-model="introduction"></mt-field>
       <div class="ensure">
-        <mt-button size="large" type="danger">申请账号</mt-button>
+        <mt-button size="large" type="danger" @click="apply">申请账号</mt-button>
       </div>
     </div>
-    <footer-nav></footer-nav>
+    <!--<footer-nav></footer-nav>-->
   </div>
 </template>
 
 <script>
-  import footerNav from '../components/footer'
+//  import footerNav from '../components/footer'
+    import { Indicator } from 'mint-ui';
   export default {
+      data() {
+          return {
+              username: '',
+              email: '',
+              password: '',
+              phone: '',
+              website: '',
+              number: '',
+              birthday: '',
+              introduction: ''
+          }
+      },
       components: {
-          footerNav
+
+      },
+    methods: {
+      changeIn() {
+        window.history.go(-1)
+      },
+      apply() {
+        Indicator.open('正在验证...')
+          setTimeout(()=>{
+              Indicator.close()
+              this.$router.push('./index')
+          },3000)
+
       }
+    },
   }
 </script>
 
