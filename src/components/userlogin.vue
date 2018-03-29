@@ -2,9 +2,8 @@
   <div id="userLogin">
     <mt-header title="登录">
       <!--<router-link to="/" slot="left">-->
-      <mt-button icon="back" @click="changeIn" slot="left">返回</mt-button>
       <!--</router-link>-->
-      <mt-button icon="more" slot="right"></mt-button>
+      <!--<mt-button icon="more" slot="right"></mt-button>-->
     </mt-header>
     <div class="user-login-box">
       <mt-field label="用户名" placeholder="请输入用户名" v-model="username"></mt-field>
@@ -69,7 +68,7 @@ export default {
       .login-options
         width: 100%
         display: flex
-        margin-top: 5px
+        margin-top: 10px
         font-size: 16px
         color: #26a2ff
         .register

@@ -1,11 +1,13 @@
 <template>
   <div id="newsDetail">
-    <mt-header title="新闻详情">
-      <!--<router-link to="/" slot="left">-->
-      <mt-button icon="back" @click="changeIn" slot="left">返回</mt-button>
-      <!--</router-link>-->
-      <mt-button icon="more" slot="right"></mt-button>
+    <div class="top-nav">
+        <mt-header title="新闻详情">
+          <!--<router-link to="/" slot="left">-->
+          <mt-button icon="back" @click="changeIn" slot="left">返回</mt-button>
+          <!--</router-link>-->
+          <mt-button icon="more" slot="right"></mt-button>
     </mt-header>
+    </div>
     <div class="content">
       <div class="title">{{newsDetail.title}}</div>
       <div class="message">
@@ -48,8 +50,14 @@
 </script>
 
 <style type="text/stylus" scoped lang="stylus">
+  .top-nav
+    position: fixed
+    z-index: 100
+    width: 100%
+    top: 0
+    left: 0
   .content
-    margin: 20px
+    margin: 50px
     .title
       font-size: 24px;
       font-weight: 700;

@@ -1,10 +1,12 @@
 <template>
   <div id="index">
+    <div class="top-nav">
     <mt-header title="主页">
       <!--<router-link to="/" slot="left">-->
       <!--</router-link>-->
-      <mt-button icon="more" slot="right"></mt-button>
+      <mt-button icon="search" slot="right"></mt-button>
     </mt-header>
+
     <!--头部导航栏开始-->
     <div class="nav">
       <mt-button size="small" @click="getNewsData(channels[0])">{{channels[0]}}</mt-button>
@@ -15,7 +17,7 @@
       <mt-button size="small" @click="getNewsData(channels[5])">{{channels[5]}}</mt-button>
     </div>
     <!--头部导航栏结束-->
-
+    </div>
 
     <!--轮播图组件开始-->
     <div class="swi" v-show="$store.state.showImg">
@@ -86,7 +88,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped type="text/stylus"  lang="stylus">
+  .top-nav
+    position: fixed
+    z-index: 100
+    width: 100%
+    top: 0
+    left: 0
+    .nav
+      background: #fff
   .swi
+    margin-top: 80px
     width: 100%
     height: 150px
     img

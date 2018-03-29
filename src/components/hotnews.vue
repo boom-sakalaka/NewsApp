@@ -1,11 +1,13 @@
 <template>
   <div class="hot-news">
-    <mt-header title="热点新闻">
-      <!--<router-link to="/" slot="left">-->
-      <mt-button icon="back" @click="changeIn" slot="left">返回</mt-button>
-      <!--</router-link>-->
-      <mt-button icon="more" slot="right"></mt-button>
+    <div class="top-nav">
+      <mt-header title="热点新闻">
+        <!--<router-link to="/" slot="left">-->
+        <mt-button icon="back" @click="changeIn" slot="left">返回</mt-button>
+        <!--</router-link>-->
+        <mt-button icon="more" slot="right"></mt-button>
     </mt-header>
+    </div>
     <news-list></news-list>
     <!--<tabbar :selected="selected" :tabs='tabs'></tabbar>-->
     <footer-nav></footer-nav>
@@ -47,5 +49,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped type="text/stylus" scoped lang="stylus">
-
+  .top-nav
+    position: fixed
+    z-index: 100
+    width: 100%
+    top: 0
+    left: 0
 </style>

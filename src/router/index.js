@@ -6,6 +6,7 @@ import user from  '../components/user'
 import newsDetail from '../components/newsDetail'
 import userLogin from '../components/userlogin'
 import register from '../components/register'
+import search from  '../components/search'
 Vue.use(Router)
 
 export default new Router({
@@ -43,6 +44,11 @@ export default new Router({
       path: '/register',
       name: 'register',
       component: register
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: search
     }
   ]
 })

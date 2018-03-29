@@ -8,7 +8,8 @@ const state = {
   channels: '',
   newsData: '',
   showImg: '',
-  newsDetail: ''
+  newsDetail: '',
+  searchData: ''
 }
 const mutations ={
   getChannelList(state,data){
@@ -22,6 +23,9 @@ const mutations ={
   },
   getNewsDetail(state,data){
     state.newsDetail =data
+  },
+  getSearchResult(state,data) {
+    state.searchData =data
   }
 }
 
@@ -41,6 +45,12 @@ var actions = {
           commit('showImg',false)
         }
       })
+  },
+  getSearchResultRequest({commit},searchInfo){
+    let url ='/api/news/search?keyword='+searchInfo+'&appkey=3ee822003d99a601'
+    axios.get(url).then((res) => {
+        commit('getSearchResult',res.data.result.list)
+    })
   }
 }
 var vuexStore =new Vuex.Store({
