@@ -79,10 +79,10 @@
           float: right
           box-sizing : border-box
           .newsTitle
-            width: 100%;
-            color: #404040;
-            font-size: 18px;
-            overflow: hidden;
+            width: 100%
+            color: #404040
+            font-size: 18px
+            overflow: hidden
           .newsMessage
             margin-top : 10px
             span

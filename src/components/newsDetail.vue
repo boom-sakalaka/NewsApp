@@ -59,13 +59,13 @@
   .content
     margin: 50px
     .title
-      font-size: 24px;
-      font-weight: 700;
-      text-align: center;
+      font-size: 24px
+      font-weight: 700
+      text-align: center
     .message
-      text-align: center;
-      margin: 20px 0;
-      color: #888;
+      text-align: center
+      margin: 20px 0
+      color: #888
       &,span
         margin-left: 10px
     img
@@ -73,8 +73,8 @@
       height: 150px
       margin-bottom: 10px
     .news-content
-      font-size: 18px;
-      line-height: 30px;
+      font-size: 18px
+      line-height: 30px
       img
         display: block
         width: 100%

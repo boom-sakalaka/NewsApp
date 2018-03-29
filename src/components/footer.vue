@@ -43,11 +43,11 @@
 
 <style type="text/stylus" scoped lang="stylus">
   .footer
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    z-index: 1;
+    right: 0
+    bottom: 0
+    left: 0
+    position: fixed
+    z-index: 1
     display: flex
     width: 100%
     text-align: center
@@ -60,21 +60,21 @@
       .nav-box
         padding: 7px 0
       .nav-icon
-        width: 24px;
-        height: 24px;
-        margin: 0 auto 5px;
+        width: 24px
+        height: 24px
+        margin: 0 auto 5px
         img
-          display: block;
-          width: 100%;
-          height: 100%;
+          display: block
+          width: 100%
+          height: 100%
       .nav-text
-        color: inherit;
-        font-size: 12px;
-        line-height: 1;
+        color: inherit
+        font-size: 12px
+        line-height: 1
       .router-link-active
         .nav-box
-          background-color: #eaeaea;
-          color: #26a2ff;
+          background-color: #eaeaea
+          color: #26a2ff
 
 
 </style>

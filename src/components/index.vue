@@ -4,7 +4,7 @@
     <mt-header title="主页">
       <!--<router-link to="/" slot="left">-->
       <!--</router-link>-->
-      <mt-button icon="search" slot="right"></mt-button>
+      <mt-button icon="search" slot="right" @click="searchSom"></mt-button>
     </mt-header>
 
     <!--头部导航栏开始-->
@@ -72,6 +72,9 @@ export default {
     },
     getNewsData(index) {
         this.$store.dispatch('getNewsDataList',index)
+    },
+    searchSom() {
+        this.$router.push('/search')
     }
   },
   computed : {
